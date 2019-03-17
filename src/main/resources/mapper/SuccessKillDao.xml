@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.goodskill.dao.SuccessKillDao">
+    
+    <insert id="insertSuccessKilled">
+        
+        insert ignore into 
+          success_killed(good_id, user_phone)
+        values (#{goodId}, #{userPhone})
+    </insert>
+    
+    <select id="queryByIdWithGoods" resultType="SuccessKilled">
+
+        select
+          sk.good_id,
+          sk.user_phone,
+          sk.create_time,
+          sk.state,
+          g.good_id as "goods.good_id",
+          g.name as "goods.name",
+          g.number as "goods.number",
+          g.start_time as "goods.start_time",
+          g.end_time as "goods.end_time",
+          g.create_time as "goods.create_time"
+        from success_killed sk
+        inner join goods g on sk.good_id = g.good_id
+        where sk.good_id = #{goodId} and sk.user_phone = #{userPhone}
+
+    </select>
+
+</mapper>
