@@ -2,22 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd868b76-4b2c-46e7-b33a-7312ffe704dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/dao/GoodsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/dao/SuccessKillDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/entity/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/entity/SuccessKilled.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/GoodsDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SuccessKillDao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sql/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/goodskill/dao/GoodsDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/goodskill/dao/SuccessKillDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/dto/Exposer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/dto/SeckillExecution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/enums/SeckillStatEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/exception/RepeatKillException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/exception/SeckillCloseException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/exception/SeckillException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/service/SeckillService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/service/impl/SeckillServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/goodskill/web/SeckillController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/goodskill/service/impl/SeckillServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/goodskill/dao/GoodsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/goodskill/dao/GoodsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/goodskill/dao/SuccessKillDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/goodskill/dao/SuccessKillDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/goodskill/entity/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/goodskill/entity/Goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/goodskill/entity/SuccessKilled.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/goodskill/entity/SuccessKilled.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/goodskill/dao/GoodsDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/goodskill/dao/GoodsDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/goodskill/dao/SuccessKillDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/goodskill/dao/SuccessKillDaoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,40 +55,40 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="14" />
-          <entry key="md" value="1" />
-          <entry key="properties" value="1" />
-          <entry key="sql" value="3" />
-          <entry key="xml" value="9" />
+          <entry key="java" value="29" />
+          <entry key="md" value="2" />
+          <entry key="properties" value="2" />
+          <entry key="sql" value="4" />
+          <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="14" />
-          <entry key="Markdown" value="1" />
-          <entry key="Properties" value="1" />
-          <entry key="SQL" value="3" />
-          <entry key="XML" value="9" />
+          <entry key="JAVA" value="29" />
+          <entry key="Markdown" value="2" />
+          <entry key="Properties" value="2" />
+          <entry key="SQL" value="4" />
+          <entry key="XML" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ft" value="37" />
-          <entry key="java" value="1599" />
-          <entry key="md" value="605" />
+          <entry key="java" value="4569" />
+          <entry key="md" value="618" />
           <entry key="properties" value="139" />
           <entry key="sql" value="1230" />
-          <entry key="xml" value="2673" />
+          <entry key="xml" value="3202" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1599" />
-          <entry key="Markdown" value="605" />
+          <entry key="JAVA" value="4569" />
+          <entry key="Markdown" value="618" />
           <entry key="Properties" value="139" />
           <entry key="SQL" value="1295" />
           <entry key="VTL" value="37" />
-          <entry key="XML" value="2608" />
+          <entry key="XML" value="3137" />
         </counts>
       </usages-collector>
     </session>
@@ -94,128 +99,56 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/service/impl/SeckillServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1037#1038#0" expanded="true" />
+                <element signature="e#1084#1085#0" expanded="true" />
+                <element signature="e#1143#1144#0" expanded="true" />
+                <element signature="e#1193#1194#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/service/impl/SeckillServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="33" column="66" lean-forward="true" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-              <folding>
-                <element signature="e#733#744#0" expanded="true" />
-                <element signature="e#786#794#0" expanded="true" />
-                <element signature="e#833#846#0" expanded="true" />
-                <element signature="e#889#902#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-end-line="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/SuccessKillDao.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dto/SeckillExecution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/sql/schema.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/dao/GoodsDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-87">
-              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+            <state relative-caret-position="272">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dao/SuccessKillDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/entity/SuccessKilled.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-              <folding>
-                <element signature="e#310#311#0" expanded="true" />
-                <element signature="e#338#339#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-                <element signature="e#707#708#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/entity/Goods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-              <folding>
-                <element signature="e#326#327#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#795#796#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#943#944#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-                <element signature="e#1049#1050#0" expanded="true" />
-                <element signature="e#1099#1100#0" expanded="true" />
-                <element signature="e#1143#1144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/dao/SuccessKillDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -229,14 +162,53 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/sql/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="34" column="27" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/web/SeckillController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="716">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -251,11 +223,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/goodskill/entity/goods.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/goodskill/entity/SuccessKilled.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
@@ -267,6 +237,22 @@
         <option value="$PROJECT_DIR$/src/test/java/org/goodskill/dao/SuccessKillDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/SuccessKillDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/goodskill/entity/Goods.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/exception/RepeatKillException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/exception/SeckillCloseException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/exception/SeckillException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/service/SeckillService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/enums/SeckillStatEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/service/impl/SeckillService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/dto/Exposer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/dto/SeckillExecution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/service/impl/SeckillServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/goodskill/service/impl/SeckillServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/goodskill/web/SeckillController.java" />
       </list>
     </option>
   </component>
@@ -346,7 +332,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="goodskill" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
@@ -354,14 +368,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
-              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
@@ -412,7 +418,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goodskill" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="goodskill" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -424,7 +448,7 @@
     <property name="SearchEverywhereHistoryKey" value="spring&#9;FILE&#9;file:///Users/yangzengrui01/ProjectCode/goodskill/src/main/resources/spring/spring-dao.xml&#10;myba&#9;FILE&#9;file:///Users/yangzengrui01/ProjectCode/goodskill/src/main/resources/mybatis-config.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552787957436" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552810662123" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -436,6 +460,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.goodskill.service.impl" />
       <recent name="org.goodskill.dao" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -454,101 +479,101 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GoodsDaoTest.reduceNumber">
-    <configuration name="GoodsDaoTest.queryAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SeckillServiceImplTest.testSeckillLogic">
+    <configuration name="SeckillServiceImplTest.executeSeckill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goodskill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.goodskill.dao.*" />
+          <option name="PATTERN" value="org.goodskill.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.goodskill.dao" />
-      <option name="MAIN_CLASS_NAME" value="org.goodskill.dao.GoodsDaoTest" />
-      <option name="METHOD_NAME" value="queryAll" />
+      <option name="PACKAGE_NAME" value="org.goodskill.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.goodskill.service.impl.SeckillServiceImplTest" />
+      <option name="METHOD_NAME" value="executeSeckill" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoodsDaoTest.queryById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceImplTest.exportSeckillUrl" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goodskill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.goodskill.dao.*" />
+          <option name="PATTERN" value="org.goodskill.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.goodskill.dao" />
-      <option name="MAIN_CLASS_NAME" value="org.goodskill.dao.GoodsDaoTest" />
-      <option name="METHOD_NAME" value="queryById" />
+      <option name="PACKAGE_NAME" value="org.goodskill.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.goodskill.service.impl.SeckillServiceImplTest" />
+      <option name="METHOD_NAME" value="exportSeckillUrl" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoodsDaoTest.reduceNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceImplTest.getGoodById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goodskill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.goodskill.dao.*" />
+          <option name="PATTERN" value="org.goodskill.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.goodskill.dao" />
-      <option name="MAIN_CLASS_NAME" value="org.goodskill.dao.GoodsDaoTest" />
-      <option name="METHOD_NAME" value="reduceNumber" />
+      <option name="PACKAGE_NAME" value="org.goodskill.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.goodskill.service.impl.SeckillServiceImplTest" />
+      <option name="METHOD_NAME" value="getGoodById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuccessKillDaoTest.insertSuccessKilled" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceImplTest.getGoodsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goodskill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.goodskill.dao.*" />
+          <option name="PATTERN" value="org.goodskill.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.goodskill.dao" />
-      <option name="MAIN_CLASS_NAME" value="org.goodskill.dao.SuccessKillDaoTest" />
-      <option name="METHOD_NAME" value="insertSuccessKilled" />
+      <option name="PACKAGE_NAME" value="org.goodskill.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.goodskill.service.impl.SeckillServiceImplTest" />
+      <option name="METHOD_NAME" value="getGoodsList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuccessKillDaoTest.queryByIdWithGoods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeckillServiceImplTest.testSeckillLogic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goodskill" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.goodskill.dao.*" />
+          <option name="PATTERN" value="org.goodskill.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.goodskill.dao" />
-      <option name="MAIN_CLASS_NAME" value="org.goodskill.dao.SuccessKillDaoTest" />
-      <option name="METHOD_NAME" value="queryByIdWithGoods" />
+      <option name="PACKAGE_NAME" value="org.goodskill.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.goodskill.service.impl.SeckillServiceImplTest" />
+      <option name="METHOD_NAME" value="testSeckillLogic" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.GoodsDaoTest.queryById" />
-      <item itemvalue="JUnit.GoodsDaoTest.queryAll" />
-      <item itemvalue="JUnit.GoodsDaoTest.reduceNumber" />
-      <item itemvalue="JUnit.SuccessKillDaoTest.insertSuccessKilled" />
-      <item itemvalue="JUnit.SuccessKillDaoTest.queryByIdWithGoods" />
+      <item itemvalue="JUnit.SeckillServiceImplTest.getGoodsList" />
+      <item itemvalue="JUnit.SeckillServiceImplTest.getGoodById" />
+      <item itemvalue="JUnit.SeckillServiceImplTest.exportSeckillUrl" />
+      <item itemvalue="JUnit.SeckillServiceImplTest.executeSeckill" />
+      <item itemvalue="JUnit.SeckillServiceImplTest.testSeckillLogic" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GoodsDaoTest.reduceNumber" />
-        <item itemvalue="JUnit.SuccessKillDaoTest.queryByIdWithGoods" />
-        <item itemvalue="JUnit.SuccessKillDaoTest.insertSuccessKilled" />
-        <item itemvalue="JUnit.GoodsDaoTest.queryAll" />
-        <item itemvalue="JUnit.GoodsDaoTest.queryById" />
+        <item itemvalue="JUnit.SeckillServiceImplTest.testSeckillLogic" />
+        <item itemvalue="JUnit.SeckillServiceImplTest.executeSeckill" />
+        <item itemvalue="JUnit.SeckillServiceImplTest.exportSeckillUrl" />
+        <item itemvalue="JUnit.SeckillServiceImplTest.getGoodById" />
+        <item itemvalue="JUnit.SeckillServiceImplTest.getGoodsList" />
       </list>
     </recent_temporary>
   </component>
@@ -562,44 +587,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552669906726</updated>
-      <workItem from="1552669908061" duration="21445000" />
+      <workItem from="1552669908061" duration="33679000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GoodsDaoTest_queryAll - 2019.03.17 at 08h 45m 55s.xml">
-      <configuration name="GoodsDaoTest.queryAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GoodsDaoTest_reduceNumber - 2019.03.17 at 08h 51m 51s.xml">
-      <configuration name="GoodsDaoTest.reduceNumber" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_insertSuccessKilled - 2019.03.17 at 09h 02m 12s.xml">
-      <configuration name="SuccessKillDaoTest.insertSuccessKilled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_insertSuccessKilled - 2019.03.17 at 09h 10m 34s.xml">
-      <configuration name="SuccessKillDaoTest.insertSuccessKilled" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_queryByIdWithGoods - 2019.03.17 at 09h 18m 26s.xml">
-      <configuration name="SuccessKillDaoTest.queryByIdWithGoods" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_queryByIdWithGoods - 2019.03.17 at 09h 20m 24s.xml">
-      <configuration name="SuccessKillDaoTest.queryByIdWithGoods" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_queryByIdWithGoods - 2019.03.17 at 09h 21m 44s.xml">
-      <configuration name="SuccessKillDaoTest.queryByIdWithGoods" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_queryByIdWithGoods - 2019.03.17 at 09h 23m 42s.xml">
-      <configuration name="SuccessKillDaoTest.queryByIdWithGoods" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SuccessKillDaoTest_queryByIdWithGoods - 2019.03.17 at 09h 27m 52s.xml">
-      <configuration name="SuccessKillDaoTest.queryByIdWithGoods" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GoodsDaoTest_reduceNumber - 2019.03.17 at 09h 28m 25s.xml">
       <configuration name="GoodsDaoTest.reduceNumber" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SeckillServiceImplTest_getGoodsList - 2019.03.17 at 14h 35m 29s.xml">
+      <configuration name="SeckillServiceImplTest.getGoodsList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_getGoodById - 2019.03.17 at 14h 40m 57s.xml">
+      <configuration name="SeckillServiceImplTest.getGoodById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_exportSeckillUrl - 2019.03.17 at 14h 42m 41s.xml">
+      <configuration name="SeckillServiceImplTest.exportSeckillUrl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_exportSeckillUrl - 2019.03.17 at 14h 43m 51s.xml">
+      <configuration name="SeckillServiceImplTest.exportSeckillUrl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_exportSeckillUrl - 2019.03.17 at 14h 48m 53s.xml">
+      <configuration name="SeckillServiceImplTest.exportSeckillUrl" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_executeSeckill - 2019.03.17 at 14h 54m 37s.xml">
+      <configuration name="SeckillServiceImplTest.executeSeckill" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_executeSeckill - 2019.03.17 at 14h 56m 31s.xml">
+      <configuration name="SeckillServiceImplTest.executeSeckill" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_testSeckillLogic - 2019.03.17 at 15h 03m 02s.xml">
+      <configuration name="SeckillServiceImplTest.testSeckillLogic" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SeckillServiceImplTest_testSeckillLogic - 2019.03.17 at 15h 04m 07s.xml">
+      <configuration name="SeckillServiceImplTest.testSeckillLogic" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21445000" />
+    <option name="totallyTimeSpent" value="33679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -622,7 +647,7 @@
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -645,58 +670,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1633">
           <caret line="121" column="33" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="578">
-            <caret line="34" column="119" selection-start-line="34" selection-start-column="119" selection-end-line="34" selection-end-column="119" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dao/GoodsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/sql/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -711,29 +688,6 @@
             <element signature="e#413#414#0" expanded="true" />
             <element signature="e#665#666#0" expanded="true" />
             <element signature="e#707#708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="33" column="66" lean-forward="true" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-          <folding>
-            <element signature="e#733#744#0" expanded="true" />
-            <element signature="e#786#794#0" expanded="true" />
-            <element signature="e#833#846#0" expanded="true" />
-            <element signature="e#889#902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dao/SuccessKillDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -785,17 +739,211 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/dao/SuccessKillDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/dao/GoodsDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-87">
           <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="561">
+            <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/exception/RepeatKillException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/exception/SeckillCloseException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
+          <folding>
+            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dao/GoodsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dao/SuccessKillDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="67" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/service/SeckillService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/enums/SeckillStatEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/exception/SeckillException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/dao/SuccessKillDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="19" column="58" lean-forward="true" selection-start-line="15" selection-end-line="19" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="39" selection-start-column="39" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dto/Exposer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/dto/SeckillExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/service/impl/SeckillServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1037#1038#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/goodskill/service/impl/SeckillServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/goodskill/web/SeckillController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
