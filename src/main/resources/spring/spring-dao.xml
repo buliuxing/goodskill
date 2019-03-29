@@ -36,4 +36,10 @@
         <property name="basePackage" value="org.goodskill.dao"/>
     </bean>
 
+    <!-- RedisDao-->
+    <bean id="redisDao" class="org.goodskill.dao.cache.RedisDao">
+        <constructor-arg index="0" value="${redis_ip}"/>
+        <constructor-arg index="1" value="${redis_port}"/>
+    </bean>
+
 </beans>

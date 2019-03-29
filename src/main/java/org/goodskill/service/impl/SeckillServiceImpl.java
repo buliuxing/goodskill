@@ -3,6 +3,7 @@ package org.goodskill.service.impl;
 
 import org.goodskill.dao.GoodsDao;
 import org.goodskill.dao.SuccessKillDao;
+import org.goodskill.dao.cache.RedisDao;
 import org.goodskill.dto.Exposer;
 import org.goodskill.dto.SeckillExecution;
 import org.goodskill.entity.Goods;
@@ -39,27 +40,40 @@ public class SeckillServiceImpl implements SeckillService {
     @Autowired
     private SuccessKillDao successKillDao;
 
+    @Autowired
+    private RedisDao redisDao;
+
     //MD5混淆的盐值
     private final String salt = "jkanfkdabiq3ru4y895y49ioY*yhd";
 
-    @Override
+
     public List<Goods> getGoodsList() {
         return goodsDao.queryAll(0, 10);
     }
 
-    @Override
+
     public Goods getGoodById(long goodId) {
         return  goodsDao.queryById(goodId);
     }
 
-    @Override
+
     public Exposer exportSeckillUrl(long goodId) {
 
-        Goods good = goodsDao.queryById(goodId);
-
+        //redis优化
+        Goods good = redisDao.getGoods(goodId);
         if(good == null){
-            return new Exposer(false, goodId);
+            good = goodsDao.queryById(goodId);
+            if(good == null){
+                return new Exposer(false, goodId);
+            }else{
+                redisDao.putSeckill(good);
+            }
+
         }
+
+
+
+
 
         Date startTime = good.getStartTime();
         Date endTime = good.getEndTime();
@@ -86,7 +100,7 @@ public class SeckillServiceImpl implements SeckillService {
     }
 
 
-    @Override
+
     @Transactional
     public SeckillExecution executeSeckill(long goodId, long userPhone, String md5)
             throws SeckillException, RepeatKillException, SeckillCloseException {
@@ -99,21 +113,23 @@ public class SeckillServiceImpl implements SeckillService {
         Date nowTime = new Date();
 
         try {
-            int updateCount = goodsDao.reduceNumber(goodId, nowTime);
-            if(updateCount <= 0){
-                //没有返回更新的记录
-                throw new SeckillCloseException("秒杀已经关闭");
+            //购买行为
+            int insertCount = successKillDao.insertSuccessKilled(goodId, userPhone);
+            if(insertCount <= 0){
+                //重复秒杀
+                throw new RepeatKillException("重复秒杀");
             }else{
-                //购买行为
-                int insertCount = successKillDao.insertSuccessKilled(goodId, userPhone);
-                if(insertCount <= 0){
-                    //重复秒杀
-                    throw new RepeatKillException("重复秒杀");
+                //秒杀成功
+                int updateCount = goodsDao.reduceNumber(goodId, nowTime);
+                if(updateCount <= 0){
+                    //没有返回更新的记录
+                    throw new SeckillCloseException("秒杀已经关闭");
+
                 }else{
-                    //秒杀成功
                     SuccessKilled successKilled = successKillDao.queryByIdWithGoods(goodId, userPhone);
                     return new SeckillExecution(goodId, SeckillStatEnum.SUCCESS, successKilled);
                 }
+
             }
         } catch (SeckillException e1) {
             throw e1;

@@ -1,5 +1,6 @@
 package org.goodskill.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Date;
  *
  */
 
-public class Goods {
+public class Goods implements Serializable {
 
     private long goodId;
 
